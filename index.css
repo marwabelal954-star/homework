@@ -1,0 +1,100 @@
+main {
+  background-color: rgb(37, 4, 82);
+  color: #ffffff;
+}
+
+.divmain {
+  display: flex;
+  width: 100%;
+}
+
+p {
+  color: lightgray;
+  text-align: left;
+}
+
+.img {
+  background-color: purple;
+  width: 50%;
+}
+.headdiv {
+  width: 50%;
+}
+
+.img img {
+  opacity: 0.5;
+  width: 100%;
+  display: block;
+}
+
+.divparint {
+  display: flex;
+  flex-direction: row;
+  margin-left: 60px;
+  justify-content: space-around;
+}
+
+.divparint h3,
+.divparint p {
+  margin-left: 0;
+  text-align: left;
+  margin-right: 150px;
+}
+
+h1,
+p {
+  margin-left: 60px;
+}
+
+span {
+  color: rgb(127, 66, 197);
+}
+
+/* 💻 Laptop */
+@media screen and (min-width: 500px) {
+  .divmain {
+    flex-direction: row;
+  }
+
+  .img {
+    order: 2;
+  }
+
+  .headdiv {
+    order: 1;
+  }
+
+  .divparint {
+    flex-direction: row;
+  }
+}
+
+/* 📱 Mobile */
+@media screen and (max-width: 499px) {
+  .divmain {
+    flex-direction: column;
+  }
+
+  .img {
+    order: 1;
+    width: 100%;
+  }
+
+  .headdiv {
+    order: 2;
+  }
+
+  .img img {
+    width: 100%;
+  }
+
+  .divparint {
+    flex-direction: row;
+  }
+
+  h1,
+  p {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
